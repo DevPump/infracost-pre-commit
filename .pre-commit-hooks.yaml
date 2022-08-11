@@ -1,8 +1,6 @@
-- id: infracost_breakdown
-  name: Infracost breakdown
+- id: infracost
+  name: Infracost
   description: Check terraform infrastructure cost
-  entry: hooks/infracost_breakdown.sh
-  language: script
-  require_serial: true
-  files: \.(tf(vars)?|hcl)$
-  exclude: \.terraform\/.*$
+  entry: infracost
+  language: golang
+  types: [terraform]
